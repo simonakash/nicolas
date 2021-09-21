@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Page Title -->
+		<title>Our News - Pacific NonProfit Bootstrap Responsive Donation Premium Template on Themeforest </title>
+		<!-- Company Icon -->
+		<link rel="icon" href="images/logo.png">
+		<!-------->
+		<!-- glide Required Core Stylesheet -->
+		<link rel="stylesheet" href="css/glide.core.min.css">
+		<!-- glide Optional Theme Stylesheet -->
+		<link rel="stylesheet" href="css/glide.theme.min.css">
+
+		<!-- Tailwind-Css -->
+		<link rel="stylesheet" href="css/tailwind.min.css">
+
+
+
+		<style>
+			/*---------font----------*/
+			@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+			body{
+				font-family: 'Sora', sans-serif;
+			}
+			.font-lato{
+				font-family: 'Lato', sans-serif;
+			}
+			/*-------------------*/
+			#sec1{
+				min-height:600px;
+			}
+			/*-------------------*/
+			@media(min-width:1244px){
+				.max-w-1155{
+					max-width: 1155px;
+				}
+			}
+			@media(min-width:1440px){
+				#sec1{
+					min-height: 713.75px;
+				}
+			}
+		</style>
+	</head>
+	<body x-data="{sticky: true}">
+		<!-- ==Header Section == -->
+		<header
+		@scroll.window="sticky= (window.pageYOffset > 150) ? false :true"
+		:class="{'bg-white duration-400 sticky py-2 filter drop-shadow-md' : !sticky}"
+		class="right-0 top-0 left-0 z-50 bg-white py-5">
+			<div class="max-w-1155 2xl:px-0 md:px-20 sm:px-10 px-5 mx-auto relative"  x-data="{humberger: false}">
+				<!-----Mobile menu------->
+				<nav class="z-50 absolute top-20 left-0 right-0 overflow-hidden" x-show="humberger"
+				x-transition:enter="duration-700 ease-in-out"
+				x-transition:enter-start="h-0"
+				x-transition:enter-end="h-screen"
+				x-transition:leave="duration-700 ease-in-out"
+				x-transition:leave-start="h-screen"
+				x-transition:leave-end="h-0"
+				>
+					<div>
+						<ul class="uppercase font-medium text-white">
+							<li class=" p-4 border-b bg-gray-800 hover:bg-gray-600 text-white">
+								<a class="block" href="index.html">Home</a>
+							</li>
+							<li class=" p-4 border-b bg-gray-800 hover:bg-gray-600 text-white">
+								<a class=" block" href="index.html">Sell</a>
+							</li>
+							<li class=" p-4 border-b bg-gray-800 hover:bg-gray-600 text-white">
+								<a class=" block" href="index.html">Construct Project </a>
+							</li>
+							<li class=" p-4 py-2 bg-gray-800 w-full text-center">
+								<a class="block py-2 border-2 border-green-400 leading-loose bg-green-400 text-white hover:bg-transparent hover:text-green-500 duration-300" href="#">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-----main menu------->
+				<nav class="flex justify-between items-center text-center">
+					<!---->
+					<div class="flex items-center">
+						<!--logo--->
+						<div class=" mr-10">
+							<a href="index.html">
+								<img height="100%" width="100%" class="w-auto h-auto" src="images/logo.png" alt="//">
+							</a>
+						</div>
+						<!----->
+						<div class="lg:block hidden" x-data=" {active :'active1'}">
+							<ul class="flex items-center xl:space-x-8 space-x-4 text-lg ">
+								<li class="relative">
+									<a @click="active = 'active1'" class=" block" href="index.html">Home</a>
+									<!---->
+									<div x-show="active === 'active1'" class="absolute left-0 right-0 flex items-center justify-center">
+										<div class=" h-2 w-2 mr-1 rounded-full bg-blue-600"></div>
+										<div class=" h-2 w-2 mr-1 rounded-full bg-blue-600"></div>
+									</div>
+								</li>
+								<li class="relative">
+									<a @click="active = 'active2'" class=" block" href="#">Sell</a>
+									<!---->
+									<div x-show="active === 'active2'" class="absolute left-0 right-0 flex items-center justify-center">
+										<div class=" h-2 w-2 mr-1 rounded-full bg-blue-600"></div>
+										<div class=" h-2 w-2 mr-1 rounded-full bg-blue-600"></div>
+									</div>
+								</li>
+								<li class="relative">
+									<a @click="active = 'active3'" class=" block" href="#">Construct Project </a>
+									<!---->
+									<div x-show="active === 'active3'" class="absolute left-0 right-0 flex items-center justify-center">
+										<div class=" h-2 w-2 mr-1 rounded-full bg-blue-600"></div>
+										<div class=" h-2 w-2 mr-1 rounded-full bg-blue-600"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!---->
+					<div class="flex items-center">
+						<!---->
+						<ul class="flex items-center xl:space-x-8 space-x-4 text-lg mr-6">
+							<!---button---->
+							<li class="lg:block hidden">
+								<a class="py-2 px-6 border-2 border-green-400 rounded-md block text-white bg-green-400 hover:bg-transparent hover:text-green-500" href="#">Contact</a>
+							</li>
+						</ul>
+						<!-----Humburger menu button----->
+						<button @click.prevent="humberger = !humberger" class=" focus:outline-none border text-gray-800 rounded p-2 lg:hidden block">
+							<span x-show="humberger === false">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+								</svg>
+							</span>
+							<span x-show="humberger === true">
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!-- ==Main Section == -->
+		<main>
+			<!-----=====sec 001=======----->
+			<section id="sec1" class="bg-cover bg-no-repeat bg-center flex items-center mb-20" style="background-image: url(images/home/bg1.jpg);">
+				<!---->
+				<div class="max-w-1155 relative mx-auto flex flex-col justify-center 2xl:px-0 md:px-20 sm:px-10 px-5">
+					<h1 class="text-center mx-auto xl:mx-0 xl:text-left font-bold lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-black 2xl:w-3/5 md:w-3/4 leading-tight tracking-tight sm:mb-20 mb-40">Your real-estate advisor with a passion for construction</h1>
+					<!--search box-->
+					<div class=" absolute 2xl:-bottom-72 lg:-bottom-52 sm:-bottom-64 -bottom-52 xl:w-3/5 sm:left-20 left-5 right-5 xl:left-auto sm:right-20 xl:right-auto" x-data="{ tab:'tab1'}">
+						<!--buttton-->
+						<div class=" flex items-center">
+							<!---->
+							<a @click.prevent="tab = 'tab1'" :class="{'font-medium': tab==='tab1'}" class="bg-green-400 lg:text-lg sm:text-base text-sm py-3 px-10 rounded-tl-xl text-white" href="#">Sell</a>
+							<!---->
+							<a @click.prevent="tab = 'tab2'" :class="{'font-medium' : tab === 'tab2'}" class="bg-blue-600 lg:text-lg sm:text-base text-sm py-3 px-10 rounded-tr-xl text-white" href="#">Construct</a>
+						</div>
+						<!--box-->
+						<div class=" bg-white lg:p-10 p-6 pt-6 rounded-2xl rounded-tl-none filter drop-shadow-2xl">
+							<form class=" flex items-end" action="#">
+								<!----->
+								<div class="relative w-full">
+									<input aria-label="form" type="search" name="search" id="search" placeholder="Search for city, neighborhood, zipcode..." class=" px-12 pr-4 text-gray-500 lg:py-4 py-3 w-full border-b-2 focus:outline-none border-gray-300 placeholder-gray-300 lg:text-base text-xs">
+									<span class=" text-gray-400 absolute lg:top-3 top-2 left-2">
+										<svg xmlns="http://www.w3.org/2000/svg" class="lg:h-8 h-6 w-6 lg:w-8" viewBox="0 0 33 33" fill="currentColor">
+										<path d="M16.8845 2.30078C13.9681 2.30422 11.1723 3.46425 9.1101 5.52641C7.04794 7.58856 5.88791 10.3845 5.88447 13.3008C5.88098 15.684 6.65945 18.0026 8.10047 19.9008C8.10047 19.9008 8.40047 20.2958 8.44947 20.3528L16.8845 30.3008L25.3235 20.3478C25.3675 20.2948 25.6685 19.9008 25.6685 19.9008L25.6695 19.8978C27.1098 18.0004 27.8879 15.6829 27.8845 13.3008C27.881 10.3845 26.721 7.58856 24.6588 5.52641C22.5967 3.46425 19.8008 2.30422 16.8845 2.30078ZM16.8845 17.3008C16.0933 17.3008 15.32 17.0662 14.6622 16.6267C14.0044 16.1871 13.4917 15.5624 13.189 14.8315C12.8862 14.1006 12.807 13.2963 12.9613 12.5204C13.1157 11.7445 13.4966 11.0318 14.056 10.4724C14.6155 9.91294 15.3282 9.53198 16.1041 9.37764C16.88 9.2233 17.6843 9.30251 18.4152 9.60526C19.1461 9.90801 19.7708 10.4207 20.2104 11.0785C20.6499 11.7363 20.8845 12.5097 20.8845 13.3008C20.8831 14.3612 20.4613 15.3779 19.7114 16.1277C18.9616 16.8776 17.9449 17.2995 16.8845 17.3008Z" fill="#C9C9C9"/>
+										</svg>
+									</span>
+								</div>
+								<!----->
+								<button :class="{'bg-green-400' :tab==='tab1', 'bg-blue-600' :tab==='tab2'}" class="lg:h-20 h-12 w-16 lg:w-24 lg:rounded-xl rounded-md focus:outline-none flex items-center justify-center text-white">
+									<svg xmlns="http://www.w3.org/2000/svg" class="lg:w-9 w-6 h-6 lg:h-9" viewBox="0 0 35 36" fill="none">
+										<path d="M29.8744 30.7985L23.5936 24.3452L29.8744 30.7985ZM27.0743 15.7207C27.0743 18.9579 25.8204 22.0625 23.5886 24.3515C21.3568 26.6406 18.3298 27.9265 15.1735 27.9265C12.0173 27.9265 8.99025 26.6406 6.75843 24.3515C4.52661 22.0625 3.27279 18.9579 3.27279 15.7207C3.27279 12.4835 4.52661 9.37884 6.75843 7.08979C8.99025 4.80074 12.0173 3.51477 15.1735 3.51477C18.3298 3.51477 21.3568 4.80074 23.5886 7.08979C25.8204 9.37884 27.0743 12.4835 27.0743 15.7207V15.7207Z" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-----=====sec 002=======----->
+			<section class="relative overflow-hidden">
+				<!--right image-->
+				<div class="lg:block hidden absolute -right-24 -top-24">
+					<img height="100%" width="100%" class="w-auto h-auto" src="images/home/bg2.png" alt="//">
+				</div>
+				<!--001-->
+				<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 lg:py-20 py-16">
+					<div class="lg:py-16 py-10 rounded-lg px-5 text-white text-center font-lato leading-tight filter drop-shadow-md" style="background: linear-gradient(99.6deg, #06EA71 -45.4%, #1C9EE9 117.71%);">
+						<p class=" lg:text-2xl md:text-base text-sm">Sell or buy your home? How do you handle this? Will you do it yourself or do you leave it to a real estate agency? It remains a difficult choice…</p>
+						<p class=" lg:text-3xl md:text-xl text-base font-bold mt-8">Would you like free professional advice – no strings attached – about the most appropriate approach for your home from an experienced broker in both constructions and real estate?</p>
+					</div>
+				</div>
+				<!--002-->
+				<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 pb-20">
+					<!---->
+					<div class="mx-auto lg:w-11/12 text-center sm:py-10">
+						<h1 class=" xl:text-5xl md:text-4xl text-2xl font-bold leading-tight tracking-tight">As a real estate advisor, I’m by your side during the entire purchase or sale process, for both seller and buyer. </h1>
+						<p class=" font-lato xl:text-lg md:text-base text-sm text-gray-500 lg:px-10 mt-5">As an intermediary, I’m your advisor which ensured that you close a nice and future-oriented deal. All this in a transparent way without strings or small print, but with 3 crystal-clear options, I’ll help you with a successful purchase or sale. </p>
+					</div>
+				</div>
+				<!--left image-->
+				<div class="lg:block hidden absolute -left-28 top-96">
+					<img height="100%" width="100%" class="w-auto h-auto" src="images/home/bg3.png" alt="//">
+				</div>
+				<!--003-->
+				<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 xl:pb-20 pb-16 grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10">
+					<!---->
+					<div class=" lg:pr-20 lg:order-1 order-2">
+						<!---->
+						<h1 class=" xl:text-4xl md:text-3xl text-2xl font-bold leading-tight">Your wingman when buying or selling.</h1>
+						<!---->
+						<p class=" xl:text-lg md:text-base text-sm font-lato text-gray-500 my-5  lg:mb-8">Are you in charge of buying or selling your home yourself? Perfect, but sometimes professional is a huge asset. <span class=" text-black font-medium"> In the need of an advisor who stand by your side, monitors your interests, advises, looks at what is possible in the future and ensures that you get the optimal selling price or do not pay a penny too much for your new home? </span>Check!  </p>
+						<!---->
+						<p class="xl:text-lg md:text-base text-sm font-lato text-gray-500">The cost? I work with a<span class=" text-black font-medium">fixed expense allowance </span>that we determine together in advance, a solution that absolutely pays for itself. If that’s not the case or when we don’t achieve the intended result… then you pay nothing at all. </p>
+						<!--button-->
+						<a class="inline-block lg:text-lg text-base py-3 mt-8 px-6 border-2 border-green-400 rounded-md block text-white bg-green-400 hover:bg-transparent hover:text-green-500" href="#">Contact Us</a>
+					</div>
+					<!---->
+					<div class=" flex items-center justify-center lg:order-2 order-1">
+						<img height="100%" width="100%" class="w-full h-auto rounded-lg filter drop-shadow-xl" src="images/home/01.jpg" alt="//">
+					</div>
+				</div>
+				<!--004-->
+				<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 xl:pb-20 pb-16 grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10">
+					<!---->
+					<div class=" flex items-center justify-center">
+						<img height="100%" width="100%" class="w-full h-auto rounded-lg filter drop-shadow-xl" src="images/home/02.jpg" alt="//">
+					</div>
+					<!---->
+					<div class=" lg:pl-20">
+						<!---->
+						<h1 class=" xl:text-4xl md:text-3xl text-2xl font-bold leading-tight">An open house</h1>
+						<!---->
+						<p class=" xl:text-lg md:text-base text-sm font-lato text-gray-500 my-5 lg:mb-8">Does your home meet the criteria to attract many potential buyers? Then an open house is the appropriate approach. Together we organize a professional open house. <span class=" text-black font-medium">I will be present that day and provide you with guidance. Moreover, I’ll advise potential buyers, point out the possibilities and answer all possible architectural questions. This way buyers will see the full potential of your home while I’ll look after your interests, and I’ll ensure a smooth sale of your home. </span></p>
+						<!---->
+						<p class="xl:text-lg md:text-base text-sm font-lato text-gray-500">The cost? I work with a combination of a fixed expense allowance and a<span class=" text-black font-medium">1% commission </span>on the sales price. A golden deal for both buyer and seller. When the house is not sold on the open house. then you only pay the fixed expense allowance.</p>
+						<!--button-->
+						<a class="inline-block lg:text-lg text-base py-3 mt-8 px-6 border-2 border-green-400 rounded-md block text-blue-600 bg-white hover:bg-green-400 hover:text-white" href="#">Get started</a>
+					</div>
+				</div>
+				<!--right image-->
+				<div class="lg:block hidden absolute -right-24 bottom-0">
+					<img height="100%" width="100%" class="w-auto h-auto" src="images/home/bg4.png" alt="//">
+				</div>
+				<!--005-->
+				<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 xl:pb-20 pb-16 grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10 pb-20">
+					<!---->
+					<div class=" lg:pr-20 lg:order-1 order-2">
+						<!---->
+						<h1 class=" xl:text-4xl md:text-3xl text-2xl font-bold leading-tight">Cooperation with a real agency. </h1>
+						<!---->
+						<p class=" xl:text-lg md:text-base text-sm font-lato text-gray-500 my-5  lg:mb-8">Your home isn’t fully suited for an open house, and you wish to rely on a real estate agent? Even then I’m happy to help you. <span class=" text-black font-medium">Together we select the right partner and together we follow the entire sale cycle.</span>This way I’m fully complementary to your real estate agent of choice and you can trust on a third party guarding your interests.</p>
+						<!---->
+						<p class="xl:text-lg md:text-base text-sm font-lato text-gray-500">The cost? This will be fully determined by the real estate agent, who generally works with a <span class=" text-black font-medium"> 3% commission </span>on the sales price. If the house has not been sold within the specified period… then you pay nothing at all.</p>
+						<!--button-->
+						<a class="inline-block lg:text-lg text-base py-3 mt-8 px-6 border-2 border-green-400 rounded-md block text-blue-600 bg-white hover:bg-green-400 hover:text-white" href="#">Contact Us</a>
+					</div>
+					<!---->
+					<div class=" flex items-center justify-center lg:order-2 order-1">
+						<img height="100%" width="100%" class="w-full h-auto rounded-lg filter drop-shadow-xl" src="images/home/03.jpg" alt="//">
+					</div>
+				</div>
+			</section>
+			<!-----=====sec 003=======----->
+			<section>
+				<!---->
+				<div class=" bg-blue-50 bg-opacity-70">
+					<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 py-20">
+						<!---->
+						<div class="mx-auto lg:w-11/12 text-center 2xl:px-14 lg:pb-16 pb-8">
+							<h1 class="md:text-4xl text-2xl font-bold leading-tight tracking-tight">Your interests, my concern</h1>
+							<p class=" font-lato xl:text-lg md:text-base text-sm text-gray-500 lg:px-10 mt-5">As a mediator, your interests are my concern. You can count on a real estate professional at your side, who will work with you to achieve an optimal sale or purchase. Because even when you are considering a purchase, an independent advice can save you many euros.</p>
+						</div>
+						<!---->
+						<div class="mx-auto lg:w-11/12 text-center 2xl:px-14">
+							<h1 class="md:text-4xl text-2xl font-bold leading-tight tracking-tight">A non-binding intake? </h1>
+							<p class=" font-lato xl:text-lg md:text-base text-sm text-gray-500 lg:px-10 mt-5">Would you like to know more about my services, a second opinion about your estimate or discuss a collaboration? Contact me, a first conversation is completely free without any strings attached. </p>
+						</div>
+					</div>
+				</div>
+				<!---->
+				<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 py-20">
+					<!---->
+					<div class="mx-auto lg:w-11/12 text-center pb-10">
+						<h1 class="md:text-4xl text-3xl font-bold leading-tight tracking-tight">Something To Say By Our  <span class=" text-blue-600">Customers</span></h1>
+					</div>
+					<!----slider----->
+					<div id="glide1" class="glide">
+						<div class="glide__track" data-glide-el="track">
+							<ul class="glide__slides justify-center">
+								<!----001---->
+								<li class="glide__slide p-5 bg-white rounded-xl filter drop-shadow-xl mb-16">
+									<!----content---->
+									<div class="flex relative">
+										<!---->
+										<div class="w-44 mr-4">
+											<img height="100%" width="100%" class="w-16 h-auto" src="images/home/04.png" alt="//">
+											<!---->
+											<div class="absolute top-0 right-2">
+												<img height="100%" width="100%" class="w-auto h-auto" src="images/home/05.png" alt="//">
+											</div>
+										</div>
+										<!---->
+										<div>
+											<h1 class=" text-xl font-bold text-black">Maxime</h1>
+											<!--rating-->
+											<div class=" flex items-center mt-1">
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+											</div>
+											<p class=" text-sm text-gray-500 mt-3">There are many variations of passages of Lorem Ipsum available, but the ajority have suffered alteration in some form.</p>
+										</div>
+									</div>
+								</li>
+								<!----002---->
+								<li class="glide__slide p-5 bg-white rounded-xl filter drop-shadow-xl mb-16">
+									<!----content---->
+									<div class="flex relative">
+										<!---->
+										<div class="w-44 mr-4">
+											<img height="100%" width="100%" class="w-16 h-auto" src="images/home/06.png" alt="//">
+											<!---->
+											<div class="absolute top-0 right-2">
+												<img height="100%" width="100%" class="w-auto h-auto" src="images/home/05.png" alt="//">
+											</div>
+										</div>
+										<!---->
+										<div>
+											<h1 class=" text-xl font-bold text-black">Manon</h1>
+											<!--rating-->
+											<div class=" flex items-center mt-1">
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+											</div>
+											<p class=" text-sm text-gray-500 mt-3">I must explain to you how all this mista idea of denouncing pleasure and praising pain was born and I will give.</p>
+										</div>
+									</div>
+								</li>
+								<!----003---->
+								<li class="glide__slide p-5 bg-white rounded-xl filter drop-shadow-xl mb-16">
+									<!----content---->
+									<div class="flex relative">
+										<!---->
+										<div class="w-44 mr-4">
+											<img height="100%" width="100%" class="w-16 h-auto" src="images/home/07.png" alt="//">
+											<!---->
+											<div class="absolute top-0 right-2">
+												<img height="100%" width="100%" class="w-auto h-auto" src="images/home/05.png" alt="//">
+											</div>
+										</div>
+										<!---->
+										<div>
+											<h1 class=" text-xl font-bold text-black">Guillaume</h1>
+											<!--rating-->
+											<div class=" flex items-center mt-1">
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+											</div>
+											<p class=" text-sm text-gray-500 mt-3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.</p>
+										</div>
+									</div>
+								</li>
+								<!----001---->
+								<li class="glide__slide p-5 bg-white rounded-xl filter drop-shadow-xl mb-16">
+									<!----content---->
+									<div class="flex relative">
+										<!---->
+										<div class="w-44 mr-4">
+											<img height="100%" width="100%" class="w-16 h-auto" src="images/home/04.png" alt="//">
+											<!---->
+											<div class="absolute top-0 right-2">
+												<img height="100%" width="100%" class="w-auto h-auto" src="images/home/05.png" alt="//">
+											</div>
+										</div>
+										<!---->
+										<div>
+											<h1 class=" text-xl font-bold text-black">Maxime</h1>
+											<!--rating-->
+											<div class=" flex items-center mt-1">
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+												<!---->
+												<svg xmlns="http://www.w3.org/2000/svg" class=" h-4 w-4" viewBox="0 0 18 17" fill="none">
+												<path d="M8.62384 13.7458C8.79982 13.6168 9.03914 13.6168 9.21512 13.7458L13.4365 16.8408C13.8277 17.1276 14.3572 16.7453 14.2079 16.2838L12.5897 11.2782C12.5228 11.0712 12.5974 10.8448 12.7741 10.718L16.9772 7.70497C17.3722 7.42182 17.1719 6.7986 16.6859 6.7986H11.5373C11.3199 6.7986 11.1273 6.65805 11.0611 6.45093L9.39571 1.24407C9.24744 0.780503 8.59151 0.780504 8.44324 1.24408L6.77786 6.45093C6.71161 6.65805 6.51908 6.7986 6.30162 6.7986H1.15308C0.667103 6.7986 0.466794 7.42182 0.861769 7.70497L5.06481 10.718C5.24159 10.8448 5.31616 11.0712 5.24925 11.2782L3.63102 16.2838C3.4818 16.7453 4.01121 17.1276 4.40241 16.8408L8.62384 13.7458Z" fill="#FF6500"/>
+												</svg>
+											</div>
+											<p class=" text-sm text-gray-500 mt-3">There are many variations of passages of Lorem Ipsum available, but the ajority have suffered alteration in some form.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="glide__bullets bottom-0 z-50" data-glide-el="controls[nav]">
+							<button class="glide__bullet" data-glide-dir="=0"></button>
+							<button class="glide__bullet" data-glide-dir="=1"></button>
+							<button class="glide__bullet" data-glide-dir="=2"></button>
+							<button class="glide__bullet" data-glide-dir="=3"></button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- ==Footer Section == -->
+		<footer class=" bg-blue-50 bg-opacity-70">
+			<!---->
+			<div class="max-w-1155 mx-auto 2xl:px-0 md:px-20 sm:px-10 px-5 py-10 text-center">
+				<!---->
+				<div class=" flex lg:flex-row flex-col justify-between pb-8">
+					<!---->
+					<div class=" 2xl:w-auto w-full">
+						<a href="index.html">
+							<img height="100%" width="100%" class="w-auto h-auto m-4 lg:mx-0 mx-auto" src="images/header-footer/logo1.png" alt="//">
+						</a>
+					</div>
+					<!---->
+					<div class="flex items-center">
+						<ul class="text-lg">
+							<li class=" inline-block m-4 my-2">
+								<a class=" block" href="#">Privacy</a>
+							</li>
+							<li class=" inline-block m-4 my-2">
+								<a class=" block" href="#">Contact</a>
+							</li>
+							<li class=" inline-block m-4 my-2">
+								<a class=" block" href="#">States</a>
+							</li>
+							<li class=" inline-block m-4 my-2">
+								<a class=" block" href="#">Sell</a>
+							</li>
+							<li class=" inline-block m-4 my-2">
+								<a class=" block" href="#">Terms & Conditions</a>
+							</li>
+							<li class=" inline-block m-4 my-2">
+								<a class=" block" href="#">Construct Project</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!---->
+				<div class=" flex lg:flex-row flex-col items-center justify-between">
+					<!---->
+					<div class="lg:text-base text-sm">
+						<p class="mr-2 inline-block"> <span class="font-bold">Phone: </span>000 123 6547</p>
+						<p class=" inline-block"> <span class="font-bold">Location: </span>Square de Meeûs 35 <span class="ml-2">1000 Brussels, Belgium</span></p>
+					</div>
+					<!---->
+					<div class=" flex items-center space-x-3 lg:mt-0 mt-5">
+						<!---->
+						<a class=" bg-green-400 rounded-md h-10 w-10 flex items-center justify-center" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 11 21" fill="none">
+							<path d="M10.2791 11.7333L10.8497 8.11389H7.28293V5.76514C7.28293 4.77514 7.78101 3.80951 9.37857 3.80951H10.9999V0.728262C10.9999 0.728262 9.52876 0.483887 8.12183 0.483887C5.18473 0.483887 3.26496 2.21764 3.26496 5.35576V8.11451H-0.00012207V11.7339H3.26496V20.4839H7.28293V11.7339L10.2791 11.7333Z" fill="white"/>
+							</svg>
+						</a>
+						<!---->
+						<a class=" rounded-md h-10 w-10 flex items-center justify-center" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 18 16" fill="none">
+							<path d="M17.9999 2.44952L16.0713 2.779L17.357 1.13158L15.107 1.79055C12.2142 -1.50429 7.71416 2.12003 8.99988 5.08539C3.85702 5.08539 1.28559 1.13158 1.28559 1.13158C1.28559 1.13158 -0.642979 4.09693 2.57131 6.40332L0.642735 5.74435C0.642735 7.72125 1.92845 9.03919 4.17845 9.69816H1.92845C3.21416 12.334 5.46416 12.334 5.46416 12.334C5.46416 12.334 3.53559 13.9814 -0.00012207 13.9814C10.607 19.2532 17.0356 9.36867 16.0713 4.09694L17.9999 2.44952Z" fill="#B3CCC8"/>
+							</svg>
+						</a>
+						<!---->
+						<a class=" rounded-md h-10 w-10 flex items-center justify-center" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 15 21" fill="none">
+							<path d="M7.96896 0.483887C3.96067 0.483887 -0.00012207 3.22461 -0.00012207 7.66041C-0.00012207 10.4813 1.54682 12.084 2.48436 12.084C2.87125 12.084 3.09376 10.9781 3.09376 10.6659C3.09376 10.2934 2.16809 9.49974 2.16809 7.94891C2.16809 4.72736 4.55882 2.4431 7.6527 2.4431C10.3128 2.4431 12.2816 3.99394 12.2816 6.84301C12.2816 8.97083 11.4497 12.9617 8.75399 12.9617C7.78145 12.9617 6.94892 12.2405 6.94892 11.207C6.94892 9.69208 7.98021 8.22587 7.98021 6.66286C7.98021 4.0106 4.31193 4.49143 4.31193 7.69696C4.31193 8.37012 4.39381 9.11508 4.68695 9.72862C4.14755 12.109 3.04625 15.655 3.04625 18.1072C3.04625 18.8644 3.15188 19.61 3.22189 20.3671C3.35439 20.5197 3.28814 20.5037 3.49127 20.4274C5.46011 17.6623 5.3901 17.1218 6.28076 13.5034C6.76141 14.4414 8.00334 14.9459 8.98775 14.9459C13.1361 14.9459 14.9999 10.7986 14.9999 7.06034C14.9999 3.08164 11.6479 0.485169 7.96834 0.485169L7.96896 0.483887Z" fill="#B3CCC8"/>
+							</svg>
+						</a>
+						<!---->
+						<a class=" rounded-md h-10 w-10 flex items-center justify-center" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 16 17" fill="none">
+							<path d="M2.78593 4.29075C3.78285 4.29075 4.59102 3.45801 4.59102 2.43078C4.59102 1.40354 3.78285 0.570801 2.78593 0.570801C1.789 0.570801 0.980835 1.40354 0.980835 2.43078C0.980835 3.45801 1.789 4.29075 2.78593 4.29075Z" fill="#B3CCC8"/>
+							<path d="M6.29553 5.70009V16.0191H9.40495V10.9161C9.40495 9.5696 9.6508 8.26559 11.2711 8.26559C12.8691 8.26559 12.8889 9.80506 12.8889 11.0011V16.0199H16V10.361C16 7.58129 15.4192 5.44507 12.266 5.44507C10.7522 5.44507 9.73742 6.30109 9.32245 7.1112H9.28037V5.70009H6.29553ZM1.22839 5.70009H4.34276V16.0191H1.22839V5.70009Z" fill="#B3CCC8"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!--  Alpine Js -->
+		<script src="js/alpine.min.js"></script>
+		<!--  glide -->
+		<script src="js/glide.min.js"></script>
+		<script>
+			var glide = new Glide('#glide1', {
+			type: 'carousel',
+			animationDuration: 2000,
+			autoplay: 4000,
+			perView: 3,
+			gap:40,
+			breakpoints: {
+				992: {
+				perView: 2
+				},
+				668: {
+				perView: 1
+				}
+			}
+			}).mount();
+	
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
